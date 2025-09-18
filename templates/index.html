@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>This is Home page</h2>
+  {% if students %}
+     <ul>
+        {% for student in students %}
+           <li>{{ student }}</li>
+        {% endfor %}
+     </ul>
+    {% else %}
+      <p>No students found.</p>
+    {% endif %}
+{% endblock %}
